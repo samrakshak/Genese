@@ -1,0 +1,40 @@
+
+This function is used to calculate the factorial of the number passed 
+to it as a parameter.A case is given when the number is less than 1
+then the factorial of that number is 1 which is returned.
+Else
+now as this is a recursive function it calls itself thus giving the 
+factorial value. Like
+
+fact(4)=4*fact(3)
+fact(3)=3*fact(2)
+fact(2)=2*fact(1)
+fact(1)=1
+so 
+fact(4)=4*(3*(2*(1)))
+
+def fact(n):
+    
+    if n <= 1:
+        return 1
+    return n * fact(n - 1)
+-------------------------------------------
+
+This function returns the sum of digits of n's factorial.
+factorial=fact(n) from above function 
+the a loop is made for every character in the factorial by converting them into string by str function then adding each number o total in a
+loop and returning the value as total 
+
+def count_digits(n):
+    
+    factorial = fact(n)
+    total = 0
+    for digit in str(factorial):
+        total += int(digit)
+    return total
+------------------------------------------------------------
+This prints the result to the screen. 
+
+if __name__ == '__main__':
+    print(count_digits(100))
+
